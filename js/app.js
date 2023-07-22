@@ -85,3 +85,45 @@ const swiper = new Swiper(".swiper", {
 //     },
 //     loop: true,
 // });
+
+$('.owl-carousel').owlCarousel({
+    rtl:true,
+    dots: false,
+    loop:true,
+    margin:10,
+    width:100,
+    nav:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true,
+            loop:false
+        },
+        100:{
+            items:1,
+            nav:true,
+            loop:false
+        },
+        200:{
+            items:2,
+            nav:true,
+            loop:false
+        },
+        400:{
+            items:2,
+            nav:true,
+            loop:false
+        },
+        600:{
+            items:2,
+            nav:true,
+            loop:false
+        },
+        1000:{
+            items:8,
+            nav:true,
+            loop:false
+        }
+    }
+});
