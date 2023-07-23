@@ -369,10 +369,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .slide-play-logo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
 }
 
 .slide-play-logo a{
@@ -390,7 +390,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .slide-movie:hover .slide-play-logo img {
     transition: all 0.4s ease;
     /* transform: scale(1.7); */
-    filter: invert(100%) hue-rotate(210deg) ;
+    filter: hue-rotate(210deg) ;
     transform: translate(-50%, -50%) scale(2);
 }
 
