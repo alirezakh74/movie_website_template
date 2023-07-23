@@ -94,6 +94,9 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     width:100,
+    // autoplay: true,
+    // autoplayTimeout:1000,
+    // autoplayHoverPause:false,
     nav:true,
     lazyLoad: true,
     responsiveClass:true,
@@ -106,27 +109,31 @@ $('.owl-carousel').owlCarousel({
         100:{
             items:1,
             nav:true,
-            loop:false
+            loop:true
         },
         200:{
             items:2,
             nav:true,
-            loop:false
+            loop:true,
+            lazyLoadEager: 1,
         },
         400:{
             items:2,
             nav:true,
-            loop:false
+            loop:true,
+            lazyLoadEager: 2,
         },
         600:{
             items:2,
             nav:true,
-            loop:false
+            loop:true,
+            lazyLoadEager: 2,
         },
         1000:{
             items:8,
             nav:true,
-            loop:false
+            loop:true,
+            lazyLoadEager: 2,
         }
     }
 });
