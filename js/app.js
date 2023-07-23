@@ -34,6 +34,8 @@ const swiper = new Swiper(".swiper", {
         delay: 2000,
     },
     loop: true,
+    preloadImages: false,
+    lazy: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -93,6 +95,7 @@ $('.owl-carousel').owlCarousel({
     margin:10,
     width:100,
     nav:true,
+    lazyLoad: true,
     responsiveClass:true,
     responsive:{
         0:{
