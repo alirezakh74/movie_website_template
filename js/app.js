@@ -137,3 +137,72 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
+
+// show navbar menu on mobile
+let menuIcon = document.querySelector(".list-menu-icon");
+let menus = document.querySelector(".navbar-menus");
+
+let line1 = document.querySelector(".line-1");
+let line2 = document.querySelector(".line-2");
+let line3 = document.querySelector(".line-3");
+
+menuIcon.addEventListener("click", () => {
+
+    if(menus.style.transform == "translateX(100%)" || menus.style.transform == "")
+    {
+        menus.style.transform = "translateX(0%)"; // show menu
+        document.getElementsByTagName("body")[0].style.height = "100%";
+        document.getElementsByTagName("body")[0].style.overflow = "hidden";
+
+        line2.style.width = "0%";
+        line1.style.transform = "translate(0, 11px) rotate(-45deg)";
+        line3.style.transform = "translate(0, -11px) rotate(45deg)";
+    }
+    else if(menus.style.transform == "translateX(0%)")
+    {
+        menus.style.transform = "translateX(100%)"; // hide menu
+        document.getElementsByTagName("body")[0].style.height = "auto";
+        document.getElementsByTagName("body")[0].style.overflow = "scroll";
+
+        line2.style.width = "100%";
+        line1.style.transform = "translate(0, 0) rotate(0deg)";
+        line3.style.transform = "translate(0, 0) rotate(0deg)";
+    }
+
+    // if(menus.style.display == "none" || menus.style.display == "")
+    // {
+    //     // menus.style.display = "block";
+    //     // menus.style.right = "0%";
+    //     // menus.style.animationName = "move_to_screen";
+    //     menus.style.transform = "translateX(0%)";
+    //     // deactivate scroll
+    //     document.getElementsByTagName("body")[0].style.height = "100%";
+    //     document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    // }
+    // else /* if(menus.style.display == "block")*/{
+    //     // menus.style.display = "none";
+    //     // menus.style.right = "100%";
+    //     // menus.style.animationName = "remove_from_screen";
+    //     menus.style.transform = "translateX(100%)";
+    //     document.getElementsByTagName("body")[0].style.height = "auto";
+    //     document.getElementsByTagName("body")[0].style.overflow = "scroll";
+    // }
+}); 
+
+
+window.addEventListener("resize", (event) => {
+    // console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight +' high');
+    if(document.body.clientWidth > 800)
+    {
+        menus.style.transform = "translateX(0%)";
+    }
+    else{
+        menus.style.transform = "translateX(100%)";
+        line2.style.width = "100%";
+        line1.style.transform = "translate(0, 0) rotate(0deg)";
+        line3.style.transform = "translate(0, 0) rotate(0deg)";
+    }
+})
+
+
