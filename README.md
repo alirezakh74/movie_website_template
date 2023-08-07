@@ -1,1 +1,1 @@
-a movie website template based on SorenVHS website
+a movie website template
